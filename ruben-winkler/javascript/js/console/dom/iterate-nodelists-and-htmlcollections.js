@@ -13,3 +13,15 @@ for (let titles of myH2) {
 }
 
 console.log("------");
+
+// Durchlaufen von NoteLists
+console.log("Durchlaufen von NodeLists mit forOf");
+let myP = document.querySelectorAll("p");
+for (let paragraphs of myP) {
+  console.log(paragraphs);
+}
+
+console.log("Durchlaufen von NodeLists mit forEach");
+myP.forEach((element) => {
+  console.log(element);
+});
