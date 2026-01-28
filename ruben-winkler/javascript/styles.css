@@ -90,11 +90,12 @@ hr {
 
 /* === FORMULAR === */
 
-form {
+/* form {
   display: grid;
-}
+} */
 
-input,
+input[type="text"],
+input[type="password"],
 textarea,
 select {
   display: block;
@@ -106,9 +107,11 @@ select {
 }
 
 textarea,
-select {
+select,
+label {
   color: #818181;
   font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .formButtons > button[type="submit"] {
