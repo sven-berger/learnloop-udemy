@@ -2,9 +2,24 @@
 
 const myArticle = document.querySelector(".jumbotron:nth-of-type(1)");
 
-const myContent = document.createElement("article");
-myContent.classList = "jumbotron test";
-myContent.id = "content";
-myContent.innerHTML = `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`;
+let article = document.createElement("article");
+article.classList = "jumbotron";
+article.id = "content";
 
-myArticle.insertAdjacentElement("beforebegin", myContent);
+let articleHeader = document.createElement("header");
+articleHeader.innerHTML = `
+    <h2>Kunden-Übersicht</h2>
+    <p>Raclette tattooed poutine tofu hexagon selvage four dollar toast.</p>
+    <hr />
+`;
+
+let articleSection = document.createElement("section");
+let articleParagraph = document.createElement("p");
+articleParagraph.textContent =
+  "Scenester edison bulb banh mi deep v ramps tattooed intelligentsia biodiesel aesthetic woke sartorial. Organic church-key austin meh semiotics occupy flannel trust fund pickled hot chicken. Quinoa glossier godard kinfolk sriracha flexitarian literally pabst microdosing disrupt woke. Literally shaman kickstarter, gastropub banh mi keytar gluten-free. Hammock everyday carry venmo live-edge. Flexitarian quinoa cronut cornhole banjo, coloring book fixie echo park offal. Activated charcoal banjo hashtag sriracha.";
+articleSection.appendChild(articleParagraph);
+
+article.appendChild(articleHeader);
+article.appendChild(articleSection);
+
+myArticle.insertAdjacentElement("beforebegin", article);
